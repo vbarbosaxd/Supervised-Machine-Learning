@@ -1,1 +1,6 @@
-# Supervised-Machine-Learning
+# Supervised Machine Learning
+For this homework, I was assigned with the task of testing two different machine learning classification models on both unscaled and scaled data and use the best model to predict whether a loan will become high risk or not.
+
+First, I used dummy encoding (also known as one-hot encoding) to turn all the columns with categorical data into binary numerical data, since both classification models can only work with numerical data. Then, since the target value (in this case, the "loan_status" column) has to be an array of numbers, rather than be in a column, in order to run the models, I used the sklearn preprocessing LabelEncoder.
+
+After creating both models, fitting them to the data, and printing their respective scores, overall, the Random Classification Model did the best at predicting the correct outcome in the test data. However, some limitations are that scaling did not improve it's score and it overfit the training data in both the scaled and unscaled data. While the Logistic Regression Model did worse overall, it showed more favorable behavior, since it's training and testing scores were closer together (meaning the model didn't overfit the training data and making it a more reliable classifier) and its score improved with the scaled data.
